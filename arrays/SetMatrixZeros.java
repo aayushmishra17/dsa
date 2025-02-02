@@ -2,6 +2,10 @@ package arrays;
 
 import java.util.Arrays;
 
+/*
+    Given a matrix if an element in the matrix is 0 then you will have to set
+    its entire column and row to 0 and then return the matrix.
+ */
 public class SetMatrixZeros {
     public static void main(String[] args) {
         SetMatrixZeros obj = new SetMatrixZeros();
