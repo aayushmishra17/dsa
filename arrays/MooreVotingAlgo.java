@@ -61,7 +61,7 @@ public class MooreVotingAlgo {
     }
     /*
         Time - O(N) + O(N)[Verification step in case majority element is not guaranteed]
-        Space - O()
+        Space - O(1)
         Moore's voting algo: We consider every unique element as a candidate and try to figure out
                              who gets the majority(> n/2) votes.
                              This is done by maintaining two parameters currElem and count.
