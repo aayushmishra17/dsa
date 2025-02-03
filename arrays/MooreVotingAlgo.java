@@ -11,7 +11,7 @@ import java.util.Map;
 public class MooreVotingAlgo {
     public static void main(String[] args) {
         MooreVotingAlgo obj = new MooreVotingAlgo();
-        int[] arr = new int[] { 2,2,1,1,1,2,2 };
+        int[] arr = new int[] { 2, 2, 1, 1, 1, 2, 2 };
         obj.approach1(arr);
         obj.approach2(arr);
         obj.approach3(arr);
@@ -30,7 +30,10 @@ public class MooreVotingAlgo {
                     currCnt++;
                 }
             }
-            majorityElement = Math.max(majorityElement, arr[i]);
+            if(currCnt > n / 2) {
+                majorityElement = arr[i];
+                break;
+            }
         }
         System.out.println("Arr = " + Arrays.toString(arr));
         System.out.println("Majority element = " + majorityElement);
