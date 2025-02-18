@@ -25,6 +25,8 @@ public class LargestElementInArray {
         arr = arrList.stream().mapToInt(i -> i).toArray();
         System.out.println("Max element = " + findMax(arr));
         System.out.println("Max element = " + findMaxRecur(1, arr, Integer.MIN_VALUE));
+
+        System.out.println("Max element using recur2 = " + findMaxRecur2(0, arr));
     }
 
     /*
@@ -63,6 +65,15 @@ public class LargestElementInArray {
         }
         max = findMaxRecur(indx + 1, arr, max);
 
+        return max;
+    }
+    private static int findMaxRecur2(int indx, int[] arr) {
+        int max = Integer.MIN_VALUE;
+        if(indx > arr.length - 1) {
+            return max;
+        }
+        max = Math.max(arr[indx], max);
+        max = Math.max(max, findMaxRecur2(indx + 1, arr));
         return max;
     }
 }
