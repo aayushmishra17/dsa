@@ -17,6 +17,9 @@ public class InsertionSortDemo {
         We can think of this sorting process to be similar to how
         we sort a hand of playing cards. We place the key in the right
         position.
+
+        We start by taking the second element and figuring out where is the right place 
+        for it in the left side. This is repeated for every element in the array.
      */
     private void insertionSort(int[] arr) {
         int[] newArr = Arrays.copyOf(arr, arr.length);
