@@ -20,6 +20,12 @@ public class BubbleSort {
 
         If two adjacent elements are equal, the algorithm does not swap them, ensuring
         their original order is maintained. Hence, bubble sort is stable.
+
+        On every scan through the array we are swapping elements if current element is greater than the next element, 
+        so element at current index is always the largest element encounterd till now. This largest element is moved to the 
+        end of the array in each scan. This is why on next scan we don't need to go to the very end of the array since it 
+        would have the largest element from previous scans, so we decrease the length to which we go by 1 every time in 
+        the inner loop: j < n - 1 - i.
      */
     private void bubbleSort(int[] arr) {
         int[] newArr = Arrays.copyOf(arr, arr.length);
