@@ -17,6 +17,9 @@ public class SelectionSort {
         The term "selection sort" derives from the algorithm's fundamental operation of selecting
         the smallest (or largest) element from an unsorted portion of the array and moving it to
         its correct position in the sorted portion.
+
+        We start from the first element and in the remaining part of the array we try to locate the 
+        smallest element then we swap. Next, we start again from the next element and this is repeated.
      */
     private void selectionSort(int[] arr) {
         int[] newArr = Arrays.copyOf(arr, arr.length);
