@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Set;
 
 /*
- * 
+ * Given an array of distinct integers and a target value, return a list of al unique combinations 
+ * where the numbers sum to the given target value. The same number cannot be used more than once.
  */
 public class CombinationSumII {
     public static void main(String[] args) {
@@ -47,7 +48,7 @@ public class CombinationSumII {
         findCombinations(arr, indx + 1, target, ans, bucket);
     }
     /*
-     * Time - O(2^N) * O(k)
+     * Time - O(2^N) * O(k) + O(N logN)[sorting given array]
      * Space - O(k * x) k = avg. length of combo; x = no. of combos.
      * 
      * We'll first need to sort the given array since we need sorted combinations.
