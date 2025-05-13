@@ -19,11 +19,11 @@ public class CombinationSumI {
     }
     /*
      * Time - O(2 ^ target) * O(k)
-     *        k = no. of possible unique combination.
+     *        k = avg. length of each combo.
      *        2^target instead of 2^n because to sum to the target value we can take 
      *        same element multiple times and this recusion depth can be larger than the 
      *        total no. of array elements.
-     * Space - O(k * x) k = no. of possible unique combination; x = avg. length of each combo.
+     * Space - O(k * x) k = avg. length of each combo.; x = no. of possible unique combination
      */
     private List<List<Integer>> approach1(int[] arr, int target) {
         List<List<Integer>> ans = new ArrayList<>();
